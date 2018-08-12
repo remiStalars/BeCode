@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="MyStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title> CV/pacours Rémi Stalars </title>
@@ -23,22 +25,85 @@
     <nav>
         <ul>
             <li> <a href="Index.html">Home</a> </li>
-            <li> <a href="Parcous.html"> parcours scolaire </a> </li>
+            <li> <a href="Parcours.html"> parcours scolaire </a> </li>
             <li> <a href="hobbis.html"> passions </a> </li>
-            <li> <a href="qual.html"> qualités/défauts</a> </li>
+            <li> <a href="qual.html"> motivation </a> </li>
         </ul>
 
 
     </nav>
 
+    <section class="container">
+        <div class="row">
+            <figure class="col-md-12">
+                <p style="font-size: 1.9em">
+                    Le sport extérieur ainsi que les jeux vidéo occupent également une partie de mon temps-libre. J’aime pratiquer des sports extrêmes comme le snowboard, le vtt et le hockey.
+                </p>
+            </figure>
 
+            <figure class="col-sm-6">
+                <img id="manettePS4" src="sources/computer-control-controller-687811.jpg" />
+            </figure>
+            <figure class="col-sm-6">
+                <img id="snowboard" src="sources/action-clouds-cold-848599.jpg" />
+            </figure>
+            <figure class="col-sm-12">
+                <p style="font-size: 1.9em">
+                    Voyager et découvrir des nouvelles choses, rencontrer diverses personnes, tout cela me rend heureux. C’est pour cela que je veux continuer à voyager tout au long de ma vie.Explorer de nouvelles expériences.
+                </p>
+            </figure>
+            <figure class="col-md-12">
+                <img id="sydney" src="sources/architectural-design-architecture-buildings-161878.jpg">
+            </figure>
 
+            <figure class="col-md-12">
+                <p style="font-size: 1.9em">
+                    Voici quelques images de mon voyage en Australie que j'ai réalisé.
+                </p>
+            </figure>
 
-    <footer>
+        </div>
 
-        &copy;Rémi Stalars - remi.stalars@hotmail.be
-    </footer>
+        <div style="text-align:center">
+            <button onclick="playPause();">Play/Pause</button>
+            <button onclick="makeBig();">Big</button>
+            <button onclick="makeSmall();">Small</button>
+            <button onclick="makeNormal();">Normal</button>
+            <br><br>
+
+              <video id="austriaTrip" width="700" controls>
+				  <source src="sources/NOOSAAAAA.mp4">
+			  </video>
+
+        </div>
+
+        <footer>
+
+            &copy;Rémi Stalars - remi.stalars@hotmail.be
+        </footer>
 
 </body>
 
 </html>
+
+<script>
+	myVideo = document.getElementById("austriaTrip");
+	function playPause() { 
+		if (myVideo.paused) 
+			myVideo.play(); 
+		else 
+			myVideo.pause(); 
+	} 
+
+	function makeBig() { 
+		myVideo.width = 1660; 
+	} 
+
+	function makeSmall() { 
+		myVideo.width = 320; 
+	} 
+
+	function makeNormal() { 
+		myVideo.width = 720; 
+	}
+</script>
